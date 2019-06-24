@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} login {% endblock %}
+{% block content %}
+
+<form class="form-signin" action="{{ url_for('price') }}" >
+    <img class="mb-4" src="../static/bootstrap-solid.svg" alt="" width="100" height="100">
+    <h1 class="h3 mb-3 f3ont-weight-normal">Please sign in</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control"  placeholder="Password" required name="password">
+    {% if check == False %}
+        <div class="text-danger">
+            <b>Please try again</b>
+            <p>password you entered did not match our record</p>
+        </div>
+    {% endif %}
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p><br>
+    <h3 class="h3 mb-3 font-weight-bold">by:Khaled Nada</h3>
+
+</form>
+
+{% endblock %}

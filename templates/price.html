@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %} price {% endblock %}
+{% block content %}
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{ data[0][4] }}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">${{ data[0][1] }} <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{ data[0][3] }} Devices</li>
+          <li>{{ data[0][2] }} GB of storage</li>
+        </ul>
+        <a type="button" class="btn btn-lg btn-block btn-outline-primary " href="{{ url_for('login') }}">Log Out</a>
+      </div>
+    </div>
+        <h3 class="h3 mb-3 font-weight-bold">by:Khaled Nada</h3>
+
+
+{% endblock %}
+
